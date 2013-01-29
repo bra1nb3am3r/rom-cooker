@@ -1,0 +1,100 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<!-- It can be added for each operators like below form
+
+<ABC>                       -> sales code
+<sapient>true</sapient>         -> feature1
+<burton>false</burton>          -> feature2
+<libtech>true</libtech>         -> feature3
+.
+.
+</ABC>
+
+each name of tags are will be environment variable with "ro.csc."
+ex) "ro.csc.sapient", "ro.csc.burton", "ro.csc.libtech" <== you could use them at any section.
+also, should be added between <FeatureSet>
+ and </FeatureSet> .
+jhwan.kim@hdlnc.com  -->
+<SamsungMobileFeature>
+
+<Country></Country>
+<CountryISO></CountryISO>
+<SalesCode></SalesCode>
+
+<!-- KOR -->
+<FeatureSet>
+
+<!-- Camera -->
+<CscFeature_Camera_EnableCameraDuringCall>true</CscFeature_Camera_EnableCameraDuringCall>
+<CscFeature_Camera_ShutterSoundMenu>true</CscFeature_Camera_ShutterSoundMenu>
+
+<!-- Message -->
+<CscFeature_Message_RecipientLimit>999</CscFeature_Message_RecipientLimit>
+<CscFeature_Message_SmsToMmsTextThreshold>999</CscFeature_Message_SmsToMmsTextThreshold>
+<CscFeature_Message_MaxSlideCount>999</CscFeature_Message_MaxSlideCount>
+<CscFeature_Message_ReplaceCRToNewLine>true</CscFeature_Message_ReplaceCRToNewLine>
+<CscFeature_Message_DisableConvertingEffectBetweenSMSMMS>true</CscFeature_Message_DisableConvertingEffectBetweenSMSMMS>
+<CscFeature_Message_DisableSmsToMmsConversionByTextInput>true</CscFeature_Message_DisableSmsToMmsConversionByTextInput>
+<CscFeature_Message_DisableBackgroundStyleWithImage>true</CscFeature_Message_DisableBackgroundStyleWithImage>
+<CscFeature_Message_EnableRegisterToCalender>true</CscFeature_Message_EnableRegisterToCalender>
+<CscFeature_Message_EnablePinyinSearch>true</CscFeature_Message_EnablePinyinSearch>
+<CscFeature_IsWanamLite>true</CscFeature_IsWanamLite>
+
+<!-- KIES -->
+
+<!-- Common -->
+<CscFeature_Common_DisablePhoneNumberFormatting>true</CscFeature_Common_DisablePhoneNumberFormatting>
+
+<!-- Contacts -->
+<CscFeature_Contact_SetLinkCountMaxAs>999</CscFeature_Contact_SetLinkCountMaxAs>
+<CscFeature_Contact_EnableMultiplePinyinSearch>true</CscFeature_Contact_EnableMultiplePinyinSearch>
+<!--CscFeature_Contact_DisableAccountIconsInContactList>true</CscFeature_Contact_DisableAccountIconsInContactList-->
+<CscFeature_Contact_UseMobileTypeAsDefaultWhenAddingNumber>true</CscFeature_Contact_UseMobileTypeAsDefaultWhenAddingNumber>
+
+<!-- Calendar -->
+<CscFeature_Calendar_SetColorOfDays>XXXXXRR</CscFeature_Calendar_SetColorOfDays>
+
+<!-- Call -->
+
+<!-- Clock -->
+
+<!-- Mini Diary -->
+
+<!-- Dialer -->
+
+<!-- Log -->
+
+<!-- RIL -->
+
+<!-- Settings -->
+
+<!-- MMApp -->
+
+<!-- MyFiles -->
+
+<!-- Gallery -->
+
+<!-- Music -->
+
+<!-- MMFW -->
+
+<!-- MTP -->
+<CscFeature_MTP_UseUnicodeDeviceFriendlyName>true</CscFeature_MTP_UseUnicodeDeviceFriendlyName>
+
+<!-- NFC -->
+
+<!-- WEB -->
+<!--CscFeature_Web_EnableAutoSimHomeUrlInProfile>true</CscFeature_Web_EnableAutoSimHomeUrlInProfile-->
+<CscFeature_Web_AddOptionToTerminate>true</CscFeature_Web_AddOptionToTerminate>
+
+<!-- AppFW -->
+<CscFeature_Framework_EnableScrCaptureSoundOnlyInCamera>true</CscFeature_Framework_EnableScrCaptureSoundOnlyInCamera>
+
+<!-- Email -->
+
+<!-- SEC FMRadio -->
+
+<!-- GMS -->
+<CscFeature_GMS_DisableSetupWizard>true</CscFeature_GMS_DisableSetupWizard>
+
+</FeatureSet>
+</SamsungMobileFeature>
