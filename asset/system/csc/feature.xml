@@ -25,6 +25,7 @@ jhwan.kim@hdlnc.com  -->
 
 <!-- Camera -->
 <CscFeature_Camera_EnableCameraDuringCall>true</CscFeature_Camera_EnableCameraDuringCall>
+<CscFeature_Camera_EnableSmsNotiPopup>true</CscFeature_Camera_EnableSmsNotiPopup>
 <CscFeature_Camera_ShutterSoundMenu>true</CscFeature_Camera_ShutterSoundMenu>
 
 <!-- Message -->
@@ -37,12 +38,16 @@ jhwan.kim@hdlnc.com  -->
 <CscFeature_Message_DisableBackgroundStyleWithImage>true</CscFeature_Message_DisableBackgroundStyleWithImage>
 <CscFeature_Message_EnableRegisterToCalender>true</CscFeature_Message_EnableRegisterToCalender>
 <CscFeature_Message_EnablePinyinSearch>true</CscFeature_Message_EnablePinyinSearch>
+<CscFeature_Message_EnableNetworkWarningDialog>true</CscFeature_Message_EnableNetworkWarningDialog>
 <CscFeature_IsWanamLite>true</CscFeature_IsWanamLite>
+<CscFeature_Message_EnableFolderView>true</CscFeature_Message_EnableFolderView>
+<CscFeature_Message_EnableMenuRemindAlert>true</CscFeature_Message_EnableMenuRemindAlert>
+<CscFeature_Message_EnableScheduledMessage>true</CscFeature_Message_EnableScheduledMessage>
+<CscFeature_Message_EnableScheduledMsgBox>true</CscFeature_Message_EnableScheduledMsgBox>
 
 <!-- KIES -->
 
 <!-- Common -->
-<CscFeature_Common_DisablePhoneNumberFormatting>true</CscFeature_Common_DisablePhoneNumberFormatting>
 
 <!-- Contacts -->
 <CscFeature_Contact_SetLinkCountMaxAs>999</CscFeature_Contact_SetLinkCountMaxAs>
@@ -52,10 +57,15 @@ jhwan.kim@hdlnc.com  -->
 
 <!-- Calendar -->
 <CscFeature_Calendar_SetColorOfDays>XXXXXRR</CscFeature_Calendar_SetColorOfDays>
+<CscFeature_Calendar_DisableGoogleMapIntegration>false</CscFeature_Calendar_DisableGoogleMapIntegration>
+<CscFeature_Calendar_DisableKies>true</CscFeature_Calendar_DisableKies>
 
 <!-- Call -->
+<CscFeature_Common_DisablePhoneNumberFormatting>true</CscFeature_Common_DisablePhoneNumberFormatting>
 
 <!-- Clock -->
+<CscFeature_Clock_EnablePinyinSortList>true</CscFeature_Clock_EnablePinyinSortList>
+<CscFeature_Clock_DisableAccWeatherInfo>true</CscFeature_Clock_DisableAccWeatherInfo>
 
 <!-- Mini Diary -->
 
@@ -64,6 +74,7 @@ jhwan.kim@hdlnc.com  -->
 <!-- Log -->
 
 <!-- RIL -->
+<CscFeature_RIL_SupportUssdWithSharpChar>true</CscFeature_RIL_SupportUssdWithSharpChar>
 
 <!-- Settings -->
 
@@ -74,6 +85,7 @@ jhwan.kim@hdlnc.com  -->
 <!-- Gallery -->
 
 <!-- Music -->
+<CscFeature_Music_SupportPinyinSort>true</CscFeature_Music_SupportPinyinSort>
 
 <!-- MMFW -->
 
@@ -85,6 +97,7 @@ jhwan.kim@hdlnc.com  -->
 <!-- WEB -->
 <!--CscFeature_Web_EnableAutoSimHomeUrlInProfile>true</CscFeature_Web_EnableAutoSimHomeUrlInProfile-->
 <CscFeature_Web_AddOptionToTerminate>true</CscFeature_Web_AddOptionToTerminate>
+<CscFeature_Web_TerminateAppOnCloseAllAction>true</CscFeature_Web_TerminateAppOnCloseAllAction>
 
 <!-- AppFW -->
 <CscFeature_Framework_EnableScrCaptureSoundOnlyInCamera>true</CscFeature_Framework_EnableScrCaptureSoundOnlyInCamera>
