@@ -10,12 +10,15 @@ system/lib/libsamsungtts.so
 system/app/Accuweather*.apk
 system/app/Allshare*.apk
 system/app/BluetoothTest.apk
+system/app/ChocoEUKor.apk
 system/app/ChromeWithBrowser.apk
 system/app/FactoryTest.apk
 system/app/FWUpgrade.apk
 system/app/Gmail.apk
 system/app/GMS_Maps.apk
+system/app/Hearingdro.apk
 system/app/HelpHub.apk
+system/app/HelvNeueLT.apk
 system/app/Kies.apk
 system/app/kieswifi.apk
 system/app/Lcdtest.apk
@@ -29,6 +32,7 @@ system/app/PlusOne.apk
 system/app/PolarisViewer.apk
 system/app/PRUI.apk
 system/app/RCSe.apk
+system/app/RoseEUKor.apk
 system/app/Samsungservice.apk
 system/app/SamsungTTS.apk
 system/app/sCloud*.apk
