@@ -76,6 +76,7 @@ copy() {
 	local FILE
 	local BASENAME
 	local ASSET
+	local DIR
 	for FILE in $BUILDDIR/$1; do
 		BASENAME="${FILE#$BUILDDIR/}"
 		if [[ -w "$FILE" ]]; then
@@ -85,7 +86,8 @@ copy() {
 		if [[ ! -r "$ASSET" ]]; then
 			error "Cannot find asset $(bold "$BASENAME")."
 		fi
-		cp -rf --parents "$ASSET" "$FILE" || error "Failed to copy $(bold "$BASENAME")."
+		DIR="$(dirname "$FILE")"
+		mkdir -p "$DIR" && cp -rf "$ASSET" "$DIR" || error "Failed to copy $(bold "$BASENAME")."
 		info "Copied $(bold "$BASENAME")."
 	done
 }
