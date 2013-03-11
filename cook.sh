@@ -170,7 +170,7 @@ done < "$LISTDIR/copy"
 
 # other stuff
 apk_res "aroma/circlebattery/app/SystemUI.apk"
-sed -i "/set_perm.\+\/xbin\/su/a set_perm(0, 0, 0777, \"/system/bin/.ext\");\nset_perm(0, 0, 06755, \"/system/bin/.ext/.su\")" "$BUILDDIR/META_INF/com/google/android/updater-script"
+sed -i "/set_perm.\+\/xbin\/su/a set_perm(0, 0, 0777, \"/system/bin/.ext\");\nset_perm(0, 0, 06755, \"/system/bin/.ext/.su\")" "$BUILDDIR/META-INF/com/google/android/updater-script"
 
 info "Tweaking $(bold "build.prop")..." 1
 sed -i '/ro\.ril\.hsxpa/s/1/2/;/ro\.ril\.gprsclass/s/10/12/' "$BUILDDIR/system/build.prop"
