@@ -9,6 +9,7 @@ system/lib/libpolarisviewer4.so
 system/lib/libsamsungtts.so
 system/app/Accuweather*.apk
 system/app/Allshare*.apk
+system/app/AllShare*.apk
 system/app/BluetoothTest.apk
 system/app/ChocoEUKor.apk
 system/app/ChromeWithBrowser.apk
@@ -45,6 +46,7 @@ system/app/Street.apk
 system/app/Syncml*.apk
 system/app/talkback.apk
 system/app/WebManual.apk
+system/app/WfdBroker.apk
 system/app/WlanTest.apk
 system/app/wssyncmlnps.apk
 system/app/YouTube.apk
