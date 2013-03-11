@@ -64,9 +64,9 @@ delete() {
 	for FILE in $BUILDDIR/$1; do
 		BASENAME="${FILE#$BUILDDIR/}"
 		if [[ ! -w "$FILE" ]]; then
-			warn "Cannot find file $BASENAME to delete."
+			warn "Cannot find file $(bold "$BASENAME") to delete."
 		else
-			rm -rf "$FILE" || error "Failed to delete $BASENAME."
+			rm -rf "$FILE" || error "Failed to delete $(bold "$BASENAME")."
 			info "Deleted $(bold "$BASENAME")."
 		fi
 	done
