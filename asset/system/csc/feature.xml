@@ -51,6 +51,7 @@ jhwan.kim@hdlnc.com  -->
 
 <!-- Contacts -->
 <CscFeature_Contact_SetLinkCountMaxAs>999</CscFeature_Contact_SetLinkCountMaxAs>
+<CscFeature_Contact_EnableCallButtonInList>false</CscFeature_Contact_EnableCallButtonInList>
 <CscFeature_Contact_EnableMultiplePinyinSearch>true</CscFeature_Contact_EnableMultiplePinyinSearch>
 <!--CscFeature_Contact_DisableAccountIconsInContactList>true</CscFeature_Contact_DisableAccountIconsInContactList-->
 <CscFeature_Contact_UseMobileTypeAsDefaultWhenAddingNumber>true</CscFeature_Contact_UseMobileTypeAsDefaultWhenAddingNumber>
