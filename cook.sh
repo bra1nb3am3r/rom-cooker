@@ -186,3 +186,5 @@ info_done
 cleanup 1
 
 info "Saved as $(bold "$ZIPNAME.cooked.zip")."
+
+# vim: noexpandtab
