@@ -61,7 +61,16 @@ info_done() {
 delete() {
 	local FILE
 	local BASENAME
-	for FILE in $BUILDDIR/$1; do
+	local FILENAME="${1%\"}"
+	FILENAME="${FILENAME#\"}"
+	FILENAME="${FILENAME#/}"
+	if [[ $FILENAME =~ ^[^/]+\.apk$ ]]; then
+		FILENAME="system/app/$FILENAME"
+	fi
+	if [[ -z "$FILENAME" ]]; then
+		return
+	fi
+	for FILE in $BUILDDIR/$FILENAME; do
 		BASENAME="${FILE#$BUILDDIR/}"
 		if [[ ! -w "$FILE" ]]; then
 			warn "Cannot find file $(bold "$BASENAME") to delete."
@@ -159,18 +168,16 @@ fi
 info_done
 
 # delete files
-while read -r LINE; do
+grep -v '^\(#\|$\)' "$LISTDIR/delete" |cut -f1|cut -d' ' -f1 | while read -r LINE; do
 	delete "$LINE"
-done < "$LISTDIR/delete"
+done
 
 # copy files
-while read -r LINE; do
+grep -v '^\(#\|$\)' "$LISTDIR/copy" | while read -r LINE; do
 	copy "$LINE"
-done < "$LISTDIR/copy"
+done
 
 # other stuff
-apk_res "aroma/circlebattery/app/SystemUI.apk"
-sed -i "/set_perm.\+\/xbin\/su/a set_perm(0, 0, 0777, \"/system/bin/.ext\");\nset_perm(0, 0, 06755, \"/system/bin/.ext/.su\")" "$BUILDDIR/META-INF/com/google/android/updater-script"
 
 info "Tweaking $(bold "build.prop")..." 1
 sed -i '/ro\.ril\.hsxpa/s/1/2/;/ro\.ril\.gprsclass/s/10/12/' "$BUILDDIR/system/build.prop"
