@@ -39,7 +39,6 @@ jhwan.kim@hdlnc.com  -->
 <CscFeature_Message_EnableRegisterToCalender>true</CscFeature_Message_EnableRegisterToCalender>
 <CscFeature_Message_EnablePinyinSearch>true</CscFeature_Message_EnablePinyinSearch>
 <CscFeature_Message_EnableNetworkWarningDialog>true</CscFeature_Message_EnableNetworkWarningDialog>
-<CscFeature_IsWanamLite>true</CscFeature_IsWanamLite>
 <CscFeature_Message_EnableFolderView>true</CscFeature_Message_EnableFolderView>
 <CscFeature_Message_EnableMenuRemindAlert>true</CscFeature_Message_EnableMenuRemindAlert>
 <CscFeature_Message_EnableScheduledMessage>true</CscFeature_Message_EnableScheduledMessage>
@@ -48,6 +47,7 @@ jhwan.kim@hdlnc.com  -->
 <!-- KIES -->
 
 <!-- Common -->
+<CscFeature_Common_DisablePhoneNumberFormatting>true</CscFeature_Common_DisablePhoneNumberFormatting>
 
 <!-- Contacts -->
 <CscFeature_Contact_SetLinkCountMaxAs>999</CscFeature_Contact_SetLinkCountMaxAs>
@@ -60,13 +60,16 @@ jhwan.kim@hdlnc.com  -->
 <CscFeature_Calendar_SetColorOfDays>XXXXXRR</CscFeature_Calendar_SetColorOfDays>
 <CscFeature_Calendar_DisableGoogleMapIntegration>false</CscFeature_Calendar_DisableGoogleMapIntegration>
 <CscFeature_Calendar_DisableKies>true</CscFeature_Calendar_DisableKies>
+<CscFeature_Calendar_SupportSMemo>false</CscFeature_Calendar_SupportSMemo>
+<CscFeature_Calendar_SupportSNote>false</CscFeature_Calendar_SupportSNote>
+<CscFeature_Calendar_SupportGoogleMap>true</CscFeature_Calendar_SupportGoogleMap>
 
 <!-- Call -->
-<CscFeature_Common_DisablePhoneNumberFormatting>true</CscFeature_Common_DisablePhoneNumberFormatting>
 
 <!-- Clock -->
 <CscFeature_Clock_EnablePinyinSortList>true</CscFeature_Clock_EnablePinyinSortList>
 <CscFeature_Clock_DisableAccWeatherInfo>true</CscFeature_Clock_DisableAccWeatherInfo>
+<CscFeature_Clock_EnableAutoPowerOnOffMenu>true</CscFeature_Clock_EnableAutoPowerOnOffMenu>
 
 <!-- Mini Diary -->
 
@@ -76,8 +79,16 @@ jhwan.kim@hdlnc.com  -->
 
 <!-- RIL -->
 <CscFeature_RIL_SupportUssdWithSharpChar>true</CscFeature_RIL_SupportUssdWithSharpChar>
+<CscFeature_RIL_EnableRoamingIcon4NationalRoaming>false</CscFeature_RIL_EnableRoamingIcon4NationalRoaming>
 
 <!-- Settings -->
+<CscFeature_Setting_DisableMenuFindMyMobile>true</CscFeature_Setting_DisableMenuFindMyMobile>
+<CscFeature_Settings_FindMyMobile>false</CscFeature_Settings_FindMyMobile>
+<CscFeature_Settings_FOTA>false</CscFeature_Settings_FOTA>
+<CscFeature_Settings_Silent_Feedback>false</CscFeature_Settings_Silent_Feedback>
+<CscFeature_Settings_GOTA>false</CscFeature_Settings_GOTA>
+<CscFeature_Setting_EnableMenuBlockCallMsg>true</CscFeature_Setting_EnableMenuBlockCallMsg>
+<CscFeature_Setting_DisableMenuSoftwareUpdate>true</CscFeature_Setting_DisableMenuSoftwareUpdate>
 
 <!-- MMApp -->
 
