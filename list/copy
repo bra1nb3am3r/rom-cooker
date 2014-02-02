@@ -1,7 +1,3 @@
-aroma/stockkernel/boot.img
 system/csc/feature.xml
 system/etc/gps.conf
-system/fonts/GS45_Arab_AndroidOS.ttf
-system/app/Superuser.apk
-system/xbin/su
-system/bin/.ext/.su
+#system/fonts/GS45_Arab_AndroidOS.ttf
