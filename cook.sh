@@ -179,9 +179,9 @@ done
 
 # other stuff
 
-info "Tweaking $(bold "build.prop")..." 1
-sed -i '/ro\.ril\.hsxpa/s/1/2/;/ro\.ril\.gprsclass/s/10/12/' "$BUILDDIR/system/build.prop"
-info_done
+#info "Tweaking $(bold "build.prop")..." 1
+#sed -i '/ro\.ril\.hsxpa/s/1/2/;/ro\.ril\.gprsclass/s/10/12/' "$BUILDDIR/system/build.prop"
+#info_done
 
 # zip everything back together
 info "Building final zip file..." 1
