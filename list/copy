@@ -2,3 +2,8 @@ system/csc/feature.xml
 system/csc/others.xml
 system/etc/gps.conf
 #system/fonts/GS45_Arab_AndroidOS.ttf
+#system/etc/init.kernel.sh
+odex/dexo.sh
+odex/dexopt-wrapper
+odex/zip
+odex/zipalign

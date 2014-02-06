@@ -183,6 +183,37 @@ done
 #sed -i '/ro\.ril\.hsxpa/s/1/2/;/ro\.ril\.gprsclass/s/10/12/' "$BUILDDIR/system/build.prop"
 #info_done
 
+# JustArchi stock ROM stuff
+UPDATER_SCRIPT="$BUILDDIR/META-INF/com/google/android/updater-script"
+#mv "$BUILDDIR/system/bin/.ext/su" "$BUILDDIR/system/bin/.ext/.su"
+#find -L "$BUILDDIR/system/bin/" -xtype l -exec rm -f {} \;
+#rm "$BUILDDIR/system/bin/debuggerd" "$BUILDDIR/system/etc/init.d/00TEST_INITD"
+#mv "$BUILDDIR/system/bin/debuggerd.real" "$BUILDDIR/system/bin/debuggerd"
+rm "$BUILDDIR/boot.img"
+find "$BUILDDIR" -type f -exec chmod 644 {} \;
+find "$BUILDDIR" -type d -exec chmod 755 {} \;
+
+# updater-script changes
+sed -i '/boot\.img/d' "$UPDATER_SCRIPT"
+sed -i '/unmount/d' "$UPDATER_SCRIPT"
+#echo 'delete("/system/bin/freshsebool");' >> "$UPDATER_SCRIPT"
+#echo 'delete("/system/bin/mkswap");' >> "$UPDATER_SCRIPT"
+#echo 'delete("/system/bin/r");' >> "$UPDATER_SCRIPT"
+#echo 'delete("/system/bin/readlink");' >> "$UPDATER_SCRIPT"
+#echo 'delete("/system/bin/swapon");' >> "$UPDATER_SCRIPT"
+#echo 'delete("/system/bin/swapoff");' >> "$UPDATER_SCRIPT"
+# set Yank555 kernel init script permission
+#echo 'set_metadata("/system/etc/init.kernel.sh", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");' >> "$UPDATER_SCRIPT"
+
+# re-odex
+echo 'ui_print("Re-odex all system jars and apks");' >> "$UPDATER_SCRIPT"
+echo 'package_extract_dir("odex", "/tmp/odex");' >> "$UPDATER_SCRIPT"
+echo 'set_perm_recursive(0, 0, 0755, 0755, "/tmp/odex");' >> "$UPDATER_SCRIPT"
+echo 'assert(run_program("/tmp/odex/dexo.sh"));' >> "$UPDATER_SCRIPT"
+echo 'delete_recursive("/tmp/odex");' >> "$UPDATER_SCRIPT"
+
+echo 'unmount("/system");' >> "$UPDATER_SCRIPT"
+
 # zip everything back together
 info "Building final zip file..." 1
 pushd "$BUILDDIR" > /dev/null
