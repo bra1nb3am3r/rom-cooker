@@ -76,6 +76,10 @@ delete() {
 			warn "Cannot find file $(bold "$BASENAME") to delete."
 		else
 			rm -rf "$FILE" || error "Failed to delete $(bold "$BASENAME")."
+			if [[ $FILE =~ \.apk$ ]]; then
+				# delete .odex as well
+				rm -rf "$(echo "$FILE"|sed 's/\.apk$/.odex/g')"
+			fi
 			info "Deleted $(bold "$BASENAME")."
 		fi
 	done
