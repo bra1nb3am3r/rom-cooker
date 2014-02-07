@@ -139,6 +139,14 @@ apk_res() {
 	rm -rf "$TMP.zip" "$TMP"
 }
 
+zipalign() {
+	info "Zipalign $(bold "$1")"
+	$BINDIR/zipalign -f 4 "$1" "$1.zipaligned"
+	if [[ $? -eq 0 && -f "$1.zipaligned" ]]; then
+		mv "$1.zipaligned" "$1"
+	fi
+}
+
 cleanup() {
 	info "Cleaning up..." 1
 	rm -rf "$TMPDIR"
@@ -179,6 +187,11 @@ done
 # copy files
 grep -v '^\(#\|$\)' "$LISTDIR/copy" | while read -r LINE; do
 	copy "$LINE"
+done
+
+# zipalign
+for F in $BUILDDIR/system/app/*.apk; do
+	zipalign "$F"
 done
 
 # other stuff
