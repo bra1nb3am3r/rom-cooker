@@ -203,7 +203,7 @@ done
 # JustArchi stock ROM stuff
 UPDATER_SCRIPT="$BUILDDIR/META-INF/com/google/android/updater-script"
 #mv "$BUILDDIR/system/bin/.ext/su" "$BUILDDIR/system/bin/.ext/.su"
-#find -L "$BUILDDIR/system/bin/" -xtype l -exec rm -f {} \;
+find -L "$BUILDDIR/system/bin/" -xtype l -exec rm -f {} \;
 #rm "$BUILDDIR/system/bin/debuggerd" "$BUILDDIR/system/etc/init.d/00TEST_INITD"
 #mv "$BUILDDIR/system/bin/debuggerd.real" "$BUILDDIR/system/bin/debuggerd"
 rm "$BUILDDIR/boot.img"
