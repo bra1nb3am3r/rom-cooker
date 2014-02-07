@@ -384,6 +384,8 @@ EdmSysScopeService.apk
 EdmSimPinService.apk
 FmmDM.apk
 FmmDS.apk
+"/system/csc/???/"
+"/system/csc/common/"
 
 #########################################################################################
 #
